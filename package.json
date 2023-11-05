@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://fabianleon95.github.io/movies-app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
