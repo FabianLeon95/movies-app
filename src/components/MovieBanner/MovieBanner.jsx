@@ -2,9 +2,18 @@ import { Link } from "react-router-dom";
 import { useRandomMovie } from "../../hooks/useRandomMovie";
 import { IMAGE_BASE_URL } from "../../utils/constants";
 import { dateFormat, limitWords } from "../../utils/format";
+// import { useEffect } from "react";
 
 const MovieBanner = () => {
   const { movie, loading, refreshMovie } = useRandomMovie();
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     refreshMovie();
+  //   }, 10000);
+
+  //   return () => clearInterval(interval);
+  // }, [refreshMovie]);
 
   return (
     <div>
