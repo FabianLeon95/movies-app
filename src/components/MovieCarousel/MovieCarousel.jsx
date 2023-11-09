@@ -10,7 +10,11 @@ const MovieCarousel = () => {
   return (
     <div>
       <h1 className="mb-4">Explorar</h1>
-      <div id="movieCarousel" className="carousel slide" data-bs-ride="true">
+      <div
+        id="movieCarousel"
+        className="carousel slide shadow"
+        data-bs-ride="true"
+      >
         <div className="carousel-inner rounded">
           {loading ? (
             <div className="carousel-item active">
