@@ -1,5 +1,5 @@
 import Header from "../components/Header/Header";
-import MovieBanner from "../components/MovieBanner/MovieBanner";
+import MovieCarousel from "../components/MovieCarousel/MovieCarousel";
 import MovieCollection from "../components/MovieCollection/MovieCollection";
 import { NOW_PLAYING_ENDPOINT, TOP_RATED_ENDPOINT } from "../utils/constants";
 
@@ -9,7 +9,7 @@ const Home = () => {
       <Header />
       <div className="container vstack gap-4">
         <MovieCollection title="En cartelera" endpoint={NOW_PLAYING_ENDPOINT} />
-        <MovieBanner />
+        <MovieCarousel />
         <MovieCollection
           title="Mejor valoradas"
           endpoint={TOP_RATED_ENDPOINT}

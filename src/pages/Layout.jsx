@@ -5,13 +5,17 @@ import Navbar from "../components/Navbar/Navbar";
 
 const Layout = () => {
   return (
-    <>
+    <div className="min-vh-100 position-relative">
       <Navbar />
-      <main>
+      <main
+        style={{
+          paddingBottom: "140px",
+        }}
+      >
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

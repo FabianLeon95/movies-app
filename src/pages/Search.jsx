@@ -3,6 +3,7 @@ import useMovieSearch from "../hooks/useSearchMovie";
 import { useState } from "react";
 import SearchField from "../components/SearchField/SearchField";
 import { dateFormat, imageUrl, limitWords } from "../utils/format";
+import Loader from "../components/Loader/Loader";
 
 const Search = () => {
   const [params, setParams] = useSearchParams();
@@ -24,10 +25,15 @@ const Search = () => {
       ></SearchField>
       <div className="vstack gap-4 mt-5">
         {loading ? (
-          <>Cargando...</>
+          <Loader />
         ) : results.length > 0 ? (
           results.map(({ id, title, poster_path, release_date, overview }) => (
-            <div key={id} className="card shadow" role="button" onClick={() => navigate(`/movie/${id}`)}>
+            <div
+              key={id}
+              className="card shadow"
+              role="button"
+              onClick={() => navigate(`/movie/${id}`)}
+            >
               <div className="d-flex g-0">
                 <div>
                   <img
@@ -54,7 +60,9 @@ const Search = () => {
             </div>
           ))
         ) : (
-          <>No hay películas que coincidan con tu búsqueda.</>
+          <span className="alert alert-secondary rounded-3">
+            No hay películas que coincidan con tu búsqueda.
+          </span>
         )}
       </div>
     </div>

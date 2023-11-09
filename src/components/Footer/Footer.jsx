@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-info bg-opacity-75">
-      <div className="container d-flex flex-wrap justify-content-center align-items-center py-5 mt-4">
+    <footer
+      className="position-absolute w-100 bg-info bg-opacity-75"
+      style={{ bottom: 0 }}
+    >
+      <div
+        className="container d-flex flex-wrap justify-content-center align-items-center"
+        style={{ height: "100px" }}
+      >
         <Link
           className="navbar-brand fw-bolder text-uppercase"
           to="/"
